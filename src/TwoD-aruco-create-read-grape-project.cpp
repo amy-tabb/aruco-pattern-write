@@ -555,11 +555,11 @@ int mainCreate(int argc, char **argv){
 	out.open(filename.c_str());
 
 	Ptr<aruco::Dictionary> dictionary =
-			aruco::getPredefinedDictionary(aruco::PREDEFINED_DICTIONARY_NAME(cv::aruco::DICT_6X6_250));
+			aruco::getPredefinedDictionary(aruco::PREDEFINED_DICTIONARY_NAME(cv::aruco::DICT_6X6_1000));
 
 	Size imageSize;
-	int squaresX = 5;
-	int squaresY = 10;
+	int squaresX = 12;
+	int squaresY = int(float(squaresX)*1.25);
 	int squareLength = 200;
 	int markerLength = 100;
 	int margins = squareLength - markerLength;
@@ -583,6 +583,7 @@ int mainCreate(int argc, char **argv){
 
 	for (int x = 0, count = 0; x < squaresX; x++){
 		for (int y = 0; y < squaresY; y++, count++){
+			cout << count << endl;
 			aruco::drawMarker(dictionary, count, markerLength, markerImg, 1);
 
 			/// where to place?
@@ -698,7 +699,7 @@ int mainRead(int argc, char **argv){
 	}
 
 	Ptr<aruco::Dictionary> dictionary =
-			aruco::getPredefinedDictionary(aruco::PREDEFINED_DICTIONARY_NAME(cv::aruco::DICT_6X6_250));
+			aruco::getPredefinedDictionary(aruco::PREDEFINED_DICTIONARY_NAME(cv::aruco::DICT_6X6_1000));
 
 
 
