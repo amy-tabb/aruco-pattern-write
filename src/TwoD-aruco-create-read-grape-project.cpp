@@ -554,8 +554,9 @@ int mainCreate(int argc, char **argv){
 	string filename = "specification_file.txt";
 	out.open(filename.c_str());
 
+	int arc_code =  cv::aruco::DICT_6X6_1000;
 	Ptr<aruco::Dictionary> dictionary =
-			aruco::getPredefinedDictionary(aruco::PREDEFINED_DICTIONARY_NAME(cv::aruco::DICT_6X6_1000));
+			aruco::getPredefinedDictionary(aruco::PREDEFINED_DICTIONARY_NAME(arc_code));
 
 	Size imageSize;
 	int squaresX = 12;
@@ -564,6 +565,7 @@ int mainCreate(int argc, char **argv){
 	int markerLength = 100;
 	int margins = squareLength - markerLength;
 
+
 	int id_start_number  = squaresX*squaresY + 100;
 	out << "squaresX " << squaresX << endl;
 	out << "squaresY " << squaresY << endl;
@@ -571,6 +573,7 @@ int mainCreate(int argc, char **argv){
 	out << "markerLength " << markerLength << endl;
 	out << "margins " << margins << endl;
 	out << "id_start_number " << id_start_number << endl;
+	out << "arc_code " << arc_code << endl;
 	out.close();
 	imageSize.width = squaresX * squareLength;
 	imageSize.height = squaresY * squareLength;
