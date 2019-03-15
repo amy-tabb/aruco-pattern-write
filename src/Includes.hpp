@@ -27,6 +27,17 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <Eigen/Dense>
 #include <Eigen/Eigenvalues>
+#include <opencv2/core/core.hpp>
+#include <opencv2/core/mat.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/highgui/highgui_c.h>
+//#include <opencv2/calib3d/calib3d.hpp>
+
+//#include <opencv2/aruco.hpp>
+//#include <opencv2/aruco/charuco.hpp>
+#include <opencv2/core/utility.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/imgcodecs.hpp>
 
 
 using namespace Eigen;
