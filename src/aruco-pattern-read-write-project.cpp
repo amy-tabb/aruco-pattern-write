@@ -595,14 +595,11 @@ int mainCreate(int argc, char **argv){
 	int markerLength = 100;
 	int margins = squareLength - markerLength;
 
-
-	int id_start_number  = squaresX*squaresY + 100;
 	out << "squaresX " << squaresX << endl;
 	out << "squaresY " << squaresY << endl;
 	out << "squareLength " << squareLength << endl;
 	out << "markerLength " << markerLength << endl;
 	out << "margins " << margins << endl;
-	out << "id_start_number " << id_start_number << endl;
 	out << "arc_code " << arc_code << endl;
 	out.close();
 	imageSize.width = squaresX * squareLength;
@@ -627,57 +624,21 @@ int mainCreate(int argc, char **argv){
 			cout << "x0, y0 " << x0 << ", " << y0 << endl;
 
 			markerImg.copyTo(boardImage(R));
-
 		}
 	}
 
 
-	filename = "backstop" + ToString<int>(squaresX) + "by" + ToString<int>(squaresY) + ".png";
+	filename = "aruco_image" + ToString<int>(squaresX) + "by" + ToString<int>(squaresY) + ".png";
 	cv::imwrite(filename, boardImage);
 
-	Mat markerImageLarge = Mat::zeros(squareLength, squareLength, CV_8UC1);
-	markerImageLarge.setTo(255);
-	for (int id = id_start_number, count  = 0; count < 8; count++, id++){
-
-		aruco::drawMarker(dictionary, id, markerLength, markerImg, 1);
-		Rect R = Rect(margins/2, margins/2, markerLength, markerLength);
-		markerImg.copyTo(markerImageLarge(R));
-		filename = "markerID" + ToString<int>(id) + ".png";
-		cv::imwrite(filename, markerImageLarge);
-	}
 
 	return 0;
 }
-
-//
-//
-//
-//
-//	Ptr<aruco::CharucoBoard> board = aruco::CharucoBoard::create(squaresX, squaresY, (float)squareLength,
-//			(float)markerLength, dictionary);
-//
-//	// show created board
-//	Mat boardImage;
-//	board->draw(imageSize, boardImage, margins, 2);
-
-//	if(showImage) {
-//		imshow("board", boardImage);
-//		waitKey(0);
-//	}
-
-//imwrite(out, boardImage);
-
-
-/**
- */
-
 
 
 
 int mainRead(int argc, char **argv){
 	Eigen::initParallel();
-
-
 
 
 	string read_dir = "";
