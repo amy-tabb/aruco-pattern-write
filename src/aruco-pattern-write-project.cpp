@@ -80,8 +80,6 @@ void EnsureDirHasTrailingBackslash(string& write_directory){
 int Create(string write_directory){
 	/// mainCreate creates the backstop, some in as well as the individual markers.
 
-	/// Print out a file the registers the markers on the board
-	/// everything is written to the current directory ... probably not the best design.
 	std::ofstream out;
 	string filename = write_directory + "specification_file.txt";
 	out.open(filename.c_str());
