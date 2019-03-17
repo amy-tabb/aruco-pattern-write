@@ -40,7 +40,7 @@ This code has been tested on Ubuntu 16.04 and Ubuntu 18.04.  You are welcome to 
  
  2. If you use the [Eclipse CDT IDE](https://www.eclipse.org/cdt/), you can import the project directly after cloning.  You may have to alter the include directory for opencv4.  
 
-2. **Note the OpenCV 4.x requires a >C++11 compiler!  I enable the GNU version with a flag : `-std=gnu++111.  There other ways of doing this, as well as other choices of compiler.**
+2. **Note the OpenCV 4.x requires a >C++11 compiler!  I enable the GNU version with a flag : `-std=gnu++11.`  There other ways of doing this, as well as other choices of compiler.**
 
 3. Required libraries are: opencv_core, opencv_imgcodecs, opencv_aruco.
 
