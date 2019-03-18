@@ -7,7 +7,6 @@ Basic code for generating a gird of aruco patterns.
 ~March 2019.  
 
 
-
 # Underlying ideas; how and when to cite this work
 
 This README file is to accompany code produced by Amy Tabb as a companion to a paper:
