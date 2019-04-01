@@ -71,8 +71,6 @@ An example is given in this repository via the directory `SampleInput`.
 
 ## Input   
 
-### Specification file format
-
 Within the read directory used as an argument above, you will need to create a text file called `specification_file.txt`.  The example from directory `SampleInput` is given below. 
 
 All of these values can be changed to reflect the wishes of the user, but highly suggest not changing `arc_code`, which is the code used to generate the dictionary of aruco patterns within OpenCV.  Also, `squaresX`*`squaresY`< `1000` given that the dictionary we have used is `cv::aruco::DICT_6X6_1000`.  
