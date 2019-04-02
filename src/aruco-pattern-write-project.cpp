@@ -113,7 +113,7 @@ int Create(string write_directory){
 
 	for (int x = 0, count = 0; x < squaresX; x++){
 		for (int y = 0; y < squaresY; y++, count++){
-			cout << count << endl;
+			//cout << count << endl;
 			aruco::drawMarker(dictionary, count, markerLength, markerImg, 1);
 
 			/// where to place?
@@ -121,7 +121,7 @@ int Create(string write_directory){
 			y0 = y*squareLength + margins/2;
 
 			Rect R = Rect(x0, y0, markerLength, markerLength);
-			cout << "x0, y0 " << x0 << ", " << y0 << endl;
+			//cout << "x0, y0 " << x0 << ", " << y0 << endl;
 
 			markerImg.copyTo(boardImage(R));
 		}
@@ -152,6 +152,8 @@ int main(int argc, char **argv){
 
 
 		Create(write_directory);
+
+		cout << "Pattern create completed!  Check the directory for the image file" << endl;
 
 	}	else {
 		cout << "Please enter a write directory.  Call this program with programname write-directory." << endl;
