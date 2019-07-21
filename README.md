@@ -5,6 +5,7 @@ Comments/Bugs/Problems: amy.tabb@ars.usda.gov
 Basic code for generating a gird of aruco patterns.
 
 ~March 2019.  
+[![DOI](https://zenodo.org/badge/176038522.svg)](https://zenodo.org/badge/latestdoi/176038522)
 
 
 # Underlying ideas; how and when to cite this work
