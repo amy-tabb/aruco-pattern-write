@@ -1,11 +1,13 @@
 # aruco-pattern-write
 
-Comments/Bugs/Problems: amy.tabb@ars.usda.gov
+Comments/Bugs/Problems: amy.tabb@usda.gov
 
 Basic code for generating a gird of aruco patterns.
 
 ~March 2019.  
 [![DOI](https://zenodo.org/badge/176038522.svg)](https://zenodo.org/badge/latestdoi/176038522)
+
+Currently, a newer, though nearly identical version of this code is provided in [amy-tabb/CASS](https://github.com/amy-tabb/CASS).  A docker image is also available there.  It is suggested that you consult that version.
 
 
 # Underlying ideas; how and when to cite this work
@@ -26,22 +28,7 @@ Paper citation:
 }
 ```
 
-
-Code release citation:
-
-```
-@misc{tabb2019code_using,
-	title = {Code from: {Using} cameras for precise measurement of two-dimensional plant features},
-	url = {https://data.nal.usda.gov/dataset/code-using-cameras-precise-measurement-two-dimensional-plant-features},
-	urldate = {2019-04-01},
-	publisher = {Ag Data Commons},
-	author = {Tabb, Amy},
-	year = {2019},
-}
-```
-
-
-If you use this code in project that results in a publication, please cite at a minimum the paper above.  Otherwise, there are no restrictions in your use of this code.  However, no guarantees are expressed or implied.
+No guarantees are expressed or implied.
 
 # Related repositories
 
@@ -69,7 +56,7 @@ To get the OpenCV4.0 extra modules to build, our experience is that you need to 
 
  1. Clone the git repository.  `cd` to the desired directory, then from the command line  -- ` git clone ` the repository name.
  
- 2. If you use the [Eclipse CDT IDE](https://www.eclipse.org/cdt/), you can import the project directly after cloning.  You may have to alter the include directory for opencv4.  
+2. Indicate the include directory for OpenCV in your IDE.  
 
 2. **Note the OpenCV 4.x requires a >C++11 compiler!  I enable the GNU version with a flag : `-std=gnu++11.`  There other ways of doing this, as well as other choices of compiler.**
 
